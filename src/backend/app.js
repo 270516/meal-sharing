@@ -21,6 +21,61 @@ app.use(cors());
 
 router.use("/meals", mealsRouter);
 
+router.use("/all-meals", mealsRouter)
+
+router.get("/future-meals", async (request, response) => {
+  try {
+    // knex syntax for selecting things. Look up the documentation for knex for further info
+    const futureMeals = await knex("meal").where("when", ">" , new Date());
+    response.json(futureMeals);
+  } catch (error) {
+    response.status(500).json({error: "No meals found"});
+  }
+});
+
+router.get("/past-meals", async(req, res) => {
+  try {
+    const pastMeals = await knex("meal").where("when", "<" , new Date());
+    res.json(pastMeals);
+  } catch (error) {
+    res.status(500).json({error: "No meals found"});
+  }
+});
+
+router.get("/all-meals", async(req, res) => {
+  try {
+    const allMeals = await knex.raw("meal").orderBy("id")
+    res.json(allMeals)
+  } catch (error) {
+    res.status(500).json({error: "No meals founcd"});
+  }
+});
+
+router.get("/first-meal", async(req, res) => {
+  try {
+    const firstMeal = await knex("meal").orderBy("id").first();
+    if (!firstMeal) {
+    return res.status(404).json({error: "No meals found"});
+  }
+  res.json(firstMeal)
+} catch (error) {
+  res.status(500).json({error: "No meals found"});
+}
+});
+
+router.get("/last-meal", async(req, res) => {
+  try {
+    const lastMeal =await knex("meal").orderBy("id", "desc").first();
+    if (!lastMeal) {
+      return res.status(404).json({error: "No Meal found"});
+    }
+    res.json(lastMeal)
+  } catch ( error) {
+    res.status(500).json({error: "No meals found"})
+  }
+});
+
+
 if (process.env.API_PATH) {
   app.use(process.env.API_PATH, router);
 } else {
@@ -30,6 +85,10 @@ if (process.env.API_PATH) {
 // for the frontend. Will first be covered in the react class
 app.use("*", (req, res) => {
   res.sendFile(path.join(`${buildPath}/index.html`));
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
 
 module.exports = app;
