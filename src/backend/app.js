@@ -25,8 +25,7 @@ router.use("/all-meals", mealsRouter)
 
 router.get("/future-meals", async (request, response) => {
   try {
-    // knex syntax for selecting things. Look up the documentation for knex for further info
-    const futureMeals = await knex("meal").where("when", ">" , new Date());
+    const futureMeals = await knex("meal").where("when", ">", new Date());
     response.json(futureMeals);
   } catch (error) {
     response.status(500).json({error: "No meals found"});
@@ -44,10 +43,10 @@ router.get("/past-meals", async(req, res) => {
 
 router.get("/all-meals", async(req, res) => {
   try {
-    const allMeals = await knex.raw("meal").orderBy("id")
-    res.json(allMeals)
+    const allMeals = await knex.raw("SELECT * FROM meal ORDER BY id");
+    res.json(allMeals.rows);
   } catch (error) {
-    res.status(500).json({error: "No meals founcd"});
+    res.status(500).json({error: "No meals found"});
   }
 });
 
