@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import TestComponent from "./components/TestComponent/TestComponent";
+import MealsList from "./components/TestComponent/MealsList";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route exact path="/test-component">
         <TestComponent></TestComponent>
       </Route>
+      <h1>Meal Sharing App</h1>
     </Router>
   );
 }
