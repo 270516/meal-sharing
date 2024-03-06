@@ -1,0 +1,9 @@
+
+
+.meal-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+    width: 300px;
+  }
