@@ -6,16 +6,24 @@ import MealsList from "./components/TestComponent/MealsList";
 function App() {
   return (
     <Router>
-      <Route exact path="/">
-        <p>test</p>
-      </Route>
-      <Route exact path="/lol">
-        <p>lol</p>
-      </Route>
-      <Route exact path="/test-component">
-        <TestComponent></TestComponent>
-      </Route>
-      <h1>Meal Sharing App</h1>
+      <div>
+        {/* Define routes */}
+        <Switch>
+          <Route exact path="/">
+            <p>test</p>
+          </Route>
+          <Route exact path="/lol">
+            <p>lol</p>
+          </Route>
+          <Route exact path="/test-component">
+            <TestComponent></TestComponent>
+          </Route>
+          {/* Route to render MealsList component */}
+          <Route exact path="/meals">
+            <MealsList />
+          </Route>
+        </Switch>
+      </div>
     </Router>
   );
 }
