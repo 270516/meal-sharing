@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Meal from "../../Meal Components/Meal";
+import Meal from "../../MealComponents/Meal";
 
 const MealsList = () => {
   const [meals, setMeals] = useState([]);

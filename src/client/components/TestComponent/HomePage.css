@@ -1,16 +1,4 @@
-* {
-    box-sizing: border-box;
-}
-.App {
-    text-align: center;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    padding: 10px;
-  }
-
-  .home-page {
+.home-page {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
@@ -42,6 +30,3 @@
     background-color: #0056b3;
   }
   
-
-
-
