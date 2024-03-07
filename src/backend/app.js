@@ -10,7 +10,7 @@ const cors = require("cors");
 
 // For week4 no need to look into this!
 // Serve the built client html
-app.use(express.static(buildPath));
+//app.use(express.static(buildPath));
 
 // Parse URL-encoded bodies (as sent by HTML forms)
 app.use(express.urlencoded({ extended: true }));
@@ -86,8 +86,8 @@ app.use("*", (req, res) => {
   res.sendFile(path.join(`${buildPath}/index.html`));
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Server is running on port ${port}`);
+// });
 
 module.exports = app;
