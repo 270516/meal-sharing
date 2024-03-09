@@ -32,3 +32,13 @@ As this is my first fullstack interactive app, I faced alot of challenges. I lea
 In addition to these technical skills, I also learned how to use the knex.raw . 
 
 Overall, this project was a great learning experience for me and helped me grow as a developer.
+
+# Screenshots
+
+![](public/images/homepage.png)
+
+![](public/images/Meals.png)
+
+![](public/images/Form.png)
+
+
