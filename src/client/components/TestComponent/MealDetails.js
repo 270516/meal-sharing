@@ -22,12 +22,11 @@ const MealDetails = () => {
 
   const handleReservationSubmit = (event) => {
     event.preventDefault();
-    // Handle form submission to create a new reservation
-    // You can use fetch or any other method to send the reservation data to the server
+
   };
 
   if (!meal) {
-    return <p>Loading...</p>; // Render loading indicator while fetching meal details
+    return <p>Loading...</p>; 
   }
 
   return (
