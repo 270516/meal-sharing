@@ -1,3 +1,7 @@
+* {background-color: rgb(235, 244, 244);
+}
+
+
 .home-page {
     max-width: 800px;
     margin: 0 auto;
@@ -8,16 +12,17 @@
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: rgb(9, 78, 55);
   }
   
   .subtitle {
     font-size: 18px;
-    color: #666;
+    color: #60824f;
     margin-bottom: 20px;
   }
   
   .view-more-btn {
-    background-color: #007bff;
+    background-color:  #095324;
     color: #fff;
     padding: 10px 20px;
     font-size: 16px;
@@ -27,6 +32,6 @@
   }
   
   .view-more-btn:hover {
-    background-color: #0056b3;
+    background-color:  #176d26;
   }
   
