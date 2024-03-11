@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import Meal from '../../MealComponents/Meal';
 
 const MealDetails = () => {
   const { id } = useParams(); 

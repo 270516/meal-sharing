@@ -55,4 +55,5 @@ router.delete("/:id", async (req, res) => {
   if (deletedRows) {
     res.json({ message: "Review deleted successfully" });
   }
-})
+});
+

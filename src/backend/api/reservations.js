@@ -28,7 +28,6 @@ router.post("/", async (request, response) => {
       console.log(error);
       response.status(500).json({ error: "Error creating reservation" });
     }
-
   });
 
   //GET Returns a reservation by id
