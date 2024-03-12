@@ -1,26 +1,37 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Meal from "../../MealComponents/Meal";
 
-const MealsList = () => {
+function MealsList() {
   const [meals, setMeals] = useState([]);
 
   useEffect(() => {
-    const fetchMeals = async () => {
-      const response = await fetch("/api/meals");
-      const data = await response.json();
-      setMeals(data);
-    };
-
     fetchMeals();
   }, []);
 
+  const fetchMeals = async () => {
+    try {
+      const response = await fetch('/api/meals');
+      const data = await response.json();
+      setMeals(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
-    <div className="meals-grid">
-      {meals.map((meal) => (
-        <Meal key={meal.id} meal={meal} />
+    <div className="meals-list">
+      {meals.map((meal, index) => (
+        <div key={index}>
+          <Meal meal={meal} />
+          <Link to={`/meals/${meal.id}`}>
+            <p>See Details...</p>
+          </Link>
+        </div>
       ))}
     </div>
   );
-};
+}
+
 
 export default MealsList;
