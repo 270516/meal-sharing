@@ -1,41 +1,67 @@
-.meal-details-container {
-    margin: 20px;
+.form-group {
+    margin-bottom: 1rem;
   }
   
-  .meal-details {
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-sizing: border-box;
   }
   
-  .meal-details h2 {
-    margin-bottom: 10px;
+  .guests-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem;
+    box-sizing: border-box;
   }
   
-  .meal-details p {
-    margin-bottom: 15px;
-  }
-  
-  .reservation-form {
-    margin-top: 20px;
-  }
-  
-  .reservation-form input[type="text"],
-  .reservation-form input[type="email"],
-  .reservation-form input[type="tel"],
-  .reservation-form button {
-    margin-bottom: 10px;
-  }
-  
-  .reservation-form button {
-    background-color: #007bff;
-    color: #fff;
+  .guests-input button {
+    background-color: transparent;
     border: none;
-    padding: 10px 20px;
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
     cursor: pointer;
   }
   
-  .reservation-form button:hover {
-    background-color: #0056b3;
+  .guests-input button:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .guests-input input[type="number"] {
+    flex-grow: 1;
+    margin: 0 0.5rem;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #ccc;
+    margin: 2rem 0;
   }

@@ -1,37 +1,47 @@
-* {background-color: rgb(235, 244, 244);
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: rgb(188, 245, 194);
+  color: rgb(3, 57, 39);
+  margin: 0;
+  padding: 0;
 }
 
-
 .home-page {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .title {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: rgb(9, 78, 55);
-  }
-  
-  .subtitle {
-    font-size: 18px;
-    color: #60824f;
-    margin-bottom: 20px;
-  }
-  
-  .view-more-btn {
-    background-color:  #095324;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .view-more-btn:hover {
-    background-color:  #176d26;
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #375a26;
+  margin-bottom: 20px;
+}
+
+.view-more-btn {
+  background-color: #095324;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.view-more-btn:hover {
+  background-color: #176d26;
+}
+
+.view-more-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(3, 57, 39, 0.5);
+}
