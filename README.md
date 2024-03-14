@@ -1,5 +1,6 @@
 # Meal Sharing App
 
+Link to the App: https://meal-sharing-gh4g.onrender.com/
 
 # Description
 
@@ -24,6 +25,7 @@ Due to some issue failed to deploy on Render. But soon will find a solution.
 - KnexJS
 - MySQL
 - Modules
+- PostgresSQL
 
 # What I Learned
 
