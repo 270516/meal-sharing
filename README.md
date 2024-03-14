@@ -35,12 +35,9 @@ In addition to these technical skills, I also learned how to use the knex.raw .
 
 Overall, this project was a great learning experience for me and helped me grow as a developer.
 
-# Screenshots
+# Video
 
-![](public/images/homepage.png)
+https://github.com/270516/meal-sharing/assets/119972778/80da67fb-a2a9-4887-82c3-0e8f97d557b5
 
-![](public/images/Meals.png)
-
-![](public/images/Form.png)
 
 
