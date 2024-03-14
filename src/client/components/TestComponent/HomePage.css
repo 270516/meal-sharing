@@ -45,3 +45,19 @@ body {
   outline: none;
   box-shadow: 0 0 0 3px rgba(3, 57, 39, 0.5);
 }
+
+.logo {
+  width: 200px; 
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 150px; 
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    width: 100px; 
+  }
+}
