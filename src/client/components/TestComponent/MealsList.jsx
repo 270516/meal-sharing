@@ -24,14 +24,15 @@ function MealsList() {
       {meals.map((meal, index) => (
         <div key={index}>
           <Meal meal={meal} />
-          <Link to={`/meals/${meal.id}`}>
-            <p>See Details...</p>
-          </Link>
+          {index === meals.length - 1 && ( 
+            <Link to={`/meals/${meal.id}`}>
+              <p>See Details...</p>
+            </Link>
+          )}
         </div>
       ))}
     </div>
   );
 }
-
 
 export default MealsList;

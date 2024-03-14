@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import TestComponent from "./components/TestComponent/TestComponent";
 import MealsList from "./components/TestComponent/MealsList";
 import HomePage from "./components/TestComponent/Homepage";
-import MealDetails from "./components/TestComponent/MealDetails";
+import MealDetails from "./components/TestComponent/MealDetails.jsx";
 
 function App() {
   return (
